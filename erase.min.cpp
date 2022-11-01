@@ -1,0 +1,2 @@
+#include<iostream>
+bool p[1000];char c;int l=0,n;intmain(){std::cin>>n;while(c!='0'&&c!='1')c=getchar();while(c=='0'||c=='1'){p[l]=c=='1';l++;c=getchar();}if(n%2){for(int i=0;i<l;i++)p[i]=!p[i];}c='';n=0;while(c!='0'&&c!='1')c=getchar();while(c=='0'||c=='1'&&n<l){if(c!=(p[n]?'1':'0')){printf("Deletionfailed");return0;};n++;c=getchar();}printf("Deletionsucceeded");return0;}
